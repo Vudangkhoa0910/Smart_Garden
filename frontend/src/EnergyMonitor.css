@@ -1,0 +1,31 @@
+.energy-monitor {
+    text-align: left;
+  }
+  
+  .energy-bar {
+    background-color: #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 25px;
+    position: relative;
+  }
+  
+  .battery-level {
+    background: linear-gradient(to right, #00ff00, #008000);
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+  }
+  
+  .solar-charge {
+    background: linear-gradient(to right, #ffff00, #ffa500);
+    height: 100%;
+    color: black;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+  }
+  
