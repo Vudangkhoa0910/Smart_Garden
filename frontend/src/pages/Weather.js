@@ -1,3 +1,4 @@
+// src/pages/Weather.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FaThermometerHalf, FaTint, FaCloudRain, FaWind, FaSmog } from "react-icons/fa";
@@ -45,7 +46,11 @@ const Weather = () => {
   };
 
   if (loading) {
-    return <div className="loading">Loading weather data...</div>;
+    return (
+        <div className="loading-container">
+            <div className="loading-message">Loading weather data...</div>
+        </div>
+    );
   }
 
   return (

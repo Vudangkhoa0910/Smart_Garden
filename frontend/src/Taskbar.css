@@ -1,30 +1,117 @@
+/* src/components/Taskbar.css */
+
 .taskbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #2c3e50;
-    padding: 10px 0;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(52, 73, 94, 0.9); /* Darker background color */
+  color: #ecf0f1;
+  padding: 10px 15px; /* Reduced padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  transition: background-color 0.3s ease;
+}
+
+.taskbar-links {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap */
+}
+
+.taskbar-button {
+  background-color: #2980b9; /* Slightly brighter */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 3px; /* Reduced margin */
+}
+
+.taskbar-button:hover {
+  background-color: #3498db; /* A bit lighter on hover */
+}
+
+.taskbar-button.active {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.taskbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for the device menu */
+.device-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.device-menu button {
+  background-color: #e74c3c; /* Red color for the switch device button */
+  padding: 12px 25px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+}
+
+.device-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 8px 12px; /* Reduced padding */
+}
+
+.device-item {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  background: none;
+  font-size: 14px; /* Reduced font size */
+}
+
+.device-item:hover {
+  background-color: #ddd;
+}
+
+/* Media Query for Smaller Screens (up to 768px) */
+@media (max-width: 768px) {
+  .taskbar {
+      padding: 8px 10px; /* Further reduced padding */
+      font-size: 14px; /* Smaller font */
   }
-  
-  .taskbar-button {
-    text-decoration: none;
-    background-color: #34495e;
-    color: #ecf0f1;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    transition: background-color 0.3s;
+
+  .taskbar-links {
+      gap: 5px; /* Even smaller gap */
   }
-  
-  .taskbar-button:hover {
-    background-color: #1abc9c;
-    color: #fff;
+
+  .taskbar-button, .device-menu button, .device-item {
+      padding: 6px 10px; /* Even smaller padding */
+      font-size: 12px; /* Even smaller font */
   }
-  
-  .active {
-    background-color: #1abc9c;
-    color: #fff;
+
+  .device-list {
+      min-width: 120px; /* Minimum width to fit on the small screen */
+      padding: 6px 8px; /* Even smaller padding */
   }
-  
+
+  .device-item {
+      font-size: 12px; /* Even smaller font */
+  }
+}

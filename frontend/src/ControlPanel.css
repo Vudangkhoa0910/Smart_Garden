@@ -1,29 +1,70 @@
 .control-panel {
-    text-align: left;
-  }
-  
-  .control-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .control-buttons button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    background-color: #ddd;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .control-buttons button.active {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  .control-buttons button:hover {
-    background-color: #bbb;
-  }
-  
+  border: 1px solid #ddd; /* Màu nhạt hơn */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px; /* Bo tròn hơn */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+  background-color: #f9f9f9; /* Nền nhạt hơn */
+}
+
+.control-panel h3 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center; /* Căn giữa tiêu đề */
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Tăng khoảng cách */
+}
+
+.device-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; /* Thêm padding để tạo khoảng trắng xung quanh mỗi thiết bị */
+  border-radius: 5px;
+  background-color: #fff; /* Nền trắng cho mỗi hàng */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ cho mỗi hàng */
+}
+
+.device-control label {
+  font-weight: 500; /* Mỏng hơn bold */
+  color: #555;
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Biến con trỏ thành hình bàn tay khi di chuột qua label */
+}
+
+.device-icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+  color: #777; /* Màu xám hơn */
+}
+
+.toggle-button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 8px; /* Bo tròn hơn */
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Chuyển đổi màu mượt mà hơn */
+  color: #666; /* Màu chữ xám hơn */
+}
+
+.toggle-button:hover {
+  background-color: #ddd;
+}
+
+.toggle-button.active {
+  background-color: #2196F3; /* Màu xanh dương đẹp hơn */
+  color: white;
+}
+
+/* Thêm hiệu ứng focus để dễ nhìn khi dùng bàn phím */
+.toggle-button:focus {
+  outline: 2px solid #2196F3;
+  outline-offset: -2px;
+}

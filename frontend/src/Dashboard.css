@@ -57,3 +57,106 @@
     color: #7f8c8d;
   }
   
+  /* Chatbox toggle button (with text "SMAI") */
+.chatbox-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 25px; /* Bo tròn nút */
+  padding: 12px 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chatbox-toggle:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+}
+
+.chatbox-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.flipped {
+  transform: scaleX(-1); /* Lật ngang video */
+}
+
+.camera-off {
+  width: 100%;
+  height: 300px;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.camera-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.camera-controls button {
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.camera-controls button:hover {
+  background: #0056b3;
+}
+
+.save-data-toggle {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background-color: #4CAF50; /* Green when inactive */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.save-data-toggle.active {
+  background-color: #f44336; /* Red when active */
+}
+
+.save-data-toggle:hover {
+  background-color: #45a049;
+}

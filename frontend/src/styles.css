@@ -1,0 +1,214 @@
+/* styles.css */
+
+/* General Auth Page Styles */
+.auth-page {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #34495E, #27AE60);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Auth Container Styles */
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px auto; /* Căn giữa theo chiều ngang */
+    box-sizing: border-box;
+}
+
+.auth-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Title Styles */
+.auth-title {
+    color: #2E7D32;
+    margin-bottom: 15px;
+    font-size: 1.7em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* SmartGarden Logo Text Effect */
+.auth-title span {
+    display: inline-block;
+    position: relative;
+    color: #27AE60;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+/* Label Styles */
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #388E3C;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* Input Styles */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #C8E6C9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #444;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+/* Button Styles */
+.auth-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.auth-button:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.auth-button:disabled {
+    background-color: #A5D6A7;
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+.auth-button-disabled {
+    background-color: #A5D6A7;
+    cursor: not-allowed;
+}
+
+/* Footer Styles */
+.auth-footer {
+    margin-top: 12px;
+    font-size: 0.9em;
+    color: #558B2F;
+}
+
+/* Link Styles */
+.auth-link {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: #1B5E20;
+    text-decoration: underline;
+}
+
+/* Media Query for Smaller Screens (up to 400px) */
+@media (max-width: 400px) {
+    .auth-container {
+        padding: 15px;
+        margin: 5px auto; /* Căn giữa theo chiều ngang */
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .auth-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-label {
+        font-size: 0.8em;
+    }
+
+    .form-input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .auth-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .auth-footer {
+        font-size: 0.8em;
+    }
+}
+
+/* QR Code Styles */
+.qr-button {
+    background-color: #2196F3;
+    color: white;
+    padding: 8px 12px; /* Nhỏ hơn một chút */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px; /* Nhỏ hơn một chút */
+    margin-top: 8px; /* Giảm margin */
+}
+
+.qr-button:hover {
+    background-color: #0B79D0;
+}
+
+/* QR Code Container */
+.qr-code-container {
+    margin-top: 10px; /* Khoảng cách giữa nút và mã QR */
+    display: flex;
+    justify-content: center; /* Căn giữa mã QR */
+}
+
+/* QR Code Image */
+.qr-code-container img {
+    max-width: 150px; /* Kích thước tối đa cho mã QR */
+    height: auto;
+    border: 1px solid #ddd; /* Viền để dễ nhìn hơn */
+    border-radius: 5px;
+}
